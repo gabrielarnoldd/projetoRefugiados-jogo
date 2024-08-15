@@ -15,8 +15,8 @@ let finalDorsa;
 let acabou;
  
 function intro() {
-    alert(`Seja bem-vindo à Trilha da coragem! \nVocê realizará uma incrível jornada de Adnan Khankan que é um atleta olímpico que quer fazer parte da seleção de refugiados.`);
-    alert(`Lembrando, para você ganhar as olimpíadas de Paris 2024. Você terá que desenvolver as seguintes características:\n➣Competitividade\n➣Disciplina\n➣Responsabilidade\n➣Empatia`);
+    alert(`Seja bem-vindo à Trilha da coragem! \nVocê realizará uma incrível jornada como Adnan Khankan, um atleta olímpico que quer fazer parte do time olímpico de refugiados.`);
+    alert(`Lembrando, para ganhar as Olimpíadas de Paris 2024. Você terá que desenvolver as seguintes características:\n➣Competitividade\n➣Disciplina\n➣Responsabilidade\n➣Empatia`);
     let resposta = prompt(`Digite [1] para começar esta linda jornada.`);
  
     if (resposta === `1`) {
@@ -31,34 +31,35 @@ function intro() {
 intro();
  
 function inicio() {
-    alert(`Adnan, conversando com seus amigos na escola, ouviu seu amigo "Shairo" falando sobre o esporte Judô.\nChegando em casa Adnan foi correndo falar para seus pais que queria fazer um esporte que se chama Judô, mostrou para seus pais e seu pai gostou muito e decidiu levar Adnan para fazer uma aula.`);
+    alert(`Adnan, conversando com seus amigos na escola, ouviu seu amigo "Shairo" falando sobre Judô.\nChegando em casa, Adnan foi correndo falar para seus pais que queria experimentar, mostrou para seus pais, que gostaram muito da ideia e decidiram levar Adnan para fazer uma aula experimental.`);
     comecando();
 }
  
 function comecando() {
     
-    let aula = prompt(`Voltando da aula de judô, Adnan achou muito interessante. Chegando em casa, seu pai perguntou-lhe se você deseja continuar com as aulas.\nSe você deseja continuar com as aulas, digite (1). Se não deseja mais fazer as aulas, digite (2).`);
+    let aula = prompt(`Após a aula de judô, chegando em casa, seu pai perguntou-lhe se você deseja continuar com as aulas.\nSe você deseja continuar com as aulas, digite (1). Se você não tem interesse em fazer as aulas, digite (2).`);
     
     if (aula === "1") {
         pontos += 5;
         alert(`Checkpoint: Pontos após decidir continuar com as aulas: ${pontos}`);
         campeonato();
     } else if (aula === "2") {
-        alert(`Que pena que você não gostou, mas seu pai se interessou muito e decidiu fazer aula também e levou Adnan junto novamente para a aula.`);
-        let novaAula = prompt(`Depois de um mês de treino com seu pai, Adnan chegou à conclusão de que tem talento para o esporte e decidiu investir nisso.\nVocê deseja aumentar sua carga horária de treinamento? Se sim, digite (1). Se não, digite (2).`);
+        alert(`Que pena que você não gostou, mas seu pai se acredita que o esporte é essencial, portanto, não te dá a opção de desistir. Além disso, ele decide fazer aulas também, como forma de estreitar sua relação com seu filho.`);
+        let novaAula = prompt(`Depois de um mês de treino com seu pai, Adnan percebeu que tem talento para o esporte e decidiu investir nisso.\nVocê deseja aumentar sua carga horária de treinamento? Se sim, digite (1). Senão, digite (2).`);
         horas(novaAula);
     } else {
         alert(`Resposta não identificada`);
         inicio(); 
     }
 }
- 
+//  corrigir campeonato
 function campeonato() {
     alert(`UAUU! você é bom nas decisões, Adnan em um mês de treino teve uma ótima performance.`);
     alert(`Portanto a sua boa performance você foi chamado para competir um campeonato estadual. Você prefere ter um treino mais intensivo para ter mais chance no campeonato ou ter um treino mais leve para diminuir as chances de se lesionar.`);
     campeonat = Number(prompt(`[1] para que os treinos sejam intensivos.\n[2] para os treinos serem mais leves.`));
     treino();
 }
+
  
 function treino() {
     if (campeonat == 1) {
