@@ -14,6 +14,7 @@ let decide;
 let finalDorsa;
 let acabou;
  
+// Função que inicia o jogo e dá boas-vindas ao jogador
 function intro() {
     alert(`Seja bem-vindo à Trilha da coragem! \nVocê realizará uma incrível jornada como Adnan Khankan, um atleta olímpico que quer fazer parte do time olímpico de refugiados.`);
     alert(`Lembrando, para ganhar as Olimpíadas de Paris 2024. Você terá que desenvolver as seguintes características:\n➣Competitividade\n➣Disciplina\n➣Responsabilidade\n➣Empatia`);
@@ -22,7 +23,7 @@ function intro() {
     if (resposta === `1`) {
         inicio();
     } else if (resposta == 2){
-        alert(`Ok! Te aguardo em outro momento.`);
+        alert(`Ok! Te aguardo em outro momento.`);  
     }else{
         alert(`Resposta não identificada`)
         intro()
@@ -30,11 +31,13 @@ function intro() {
 }
 intro();
  
+// Função que inicia a história após a introdução
 function inicio() {
     alert(`Adnan, conversando com seus amigos na escola, ouviu seu amigo "Shairo" falando sobre Judô.\nChegando em casa, Adnan foi correndo falar para seus pais que queria experimentar, mostrou para seus pais, que gostaram muito da ideia e decidiram levar Adnan para fazer uma aula experimental.`);
     comecando();
 }
  
+// Função para decidir se Adnan vai continuar com as aulas de judô
 function comecando() {
     
     let aula = prompt(`Após a aula de judô, chegando em casa, seu pai perguntou-lhe se você deseja continuar com as aulas.\nSe você deseja continuar com as aulas, digite (1). Se você não tem interesse em fazer as aulas, digite (2).`);
@@ -52,7 +55,7 @@ function comecando() {
         inicio(); 
     }
 }
-//  corrigir campeonato
+// Função para decidir sobre a intensidade do treino para o campeonato
 function campeonato() {
     alert(`UAUU! você é bom nas decisões, Adnan em um mês de treino teve uma ótima performance.`);
     alert(`Portanto a sua boa performance você foi chamado para competir um campeonato estadual. Você prefere ter um treino mais intensivo para ter mais chance no campeonato ou ter um treino mais leve para diminuir as chances de se lesionar.`);
@@ -60,7 +63,7 @@ function campeonato() {
     treino();
 }
 
- 
+ // Função que define o resultado do campeonato baseado na intensidade do treino
 function treino() {
     if (campeonat == 1) {
         inventario[0] = 'Competitividade';
@@ -83,7 +86,7 @@ function treino() {
         treino()
     }
 }
- 
+ // Função para decidir o que fazer ao chegar em casa após a competição
 function horas(valorAula) {
     if (valorAula == 1) {
         alert(`Você aumentou sua carga horária e se dedicou muito, e seu professor escreveu você para um campeonato estadual.`);
@@ -104,6 +107,8 @@ function horas(valorAula) {
     horas() }
 }
  
+
+// Função para decidir o que fazer quando a guerra começa ao chegar em casa com o troféu
 function casa() {
     alert(`Você muito feliz indo para casa com seu troféu de CAMPEÃO, e seu pai com sorriso no rosto. No momento em que viram a esquina de casa, escutam barulhos de tiros, bombas e gritos. Você e seu pai começam a correr sem parar.`);
     fuga = Number(prompt(`Vocês têm a decisão de fugir para casa ou para um abrigo bem longe.\n[1] Para fugir para casa.\n[2] Para fugir para um abrigo.`));
@@ -118,6 +123,7 @@ function casa() {
     }
 }
  
+// Função para decidir o que fazer ao sair do campeonato e enfrentar a guerra ao chegar em casa
 function indoCasa() {
     alert(`Após a cerimônia de medalhas, você e seu pai pegam o carro com um sorriso no rosto adiante, vão em direção a sua casa. Chegando em casa eles se deparam com sons de tiros e bombas.`);
     sair = Number(prompt(`Você e seu pai estão apavorados, vocês têm que fugir. Você tem que tomar uma decisão:\n[1] Para fugir para um abrigo bem longe.\n[2] Para se esconder em casa.`));
@@ -131,6 +137,7 @@ function indoCasa() {
     }
 }
  
+// Função para lidar com a morte do personagem
 function morre() {
     alert(`Vocês foram para casa, e não paravam de ouvir sons de bombas e gritos muito altos, você e seu pai foram para a cozinha porque era o local mais protegido da casa, você muito nervoso abraçou seu troféu de campeão muito forte e fechou seus olhos e estava fazendo de tudo para não pensar no caos lá fora. Diante um lugar onde deveria haver paz, a brutalidade da guerra na Síria lhe alcançou. Ele chegou a óbito ali, entre seus sonhos de um futuro que não pode viver.`);
 
@@ -149,6 +156,7 @@ function morre() {
     }
 }
  
+// Função para decidir o que fazer ao chegar no abrigo
 function abrigo() {
     treinarAbrigo = Number(prompt(`Vocês conseguiram chegar ao abrigo e estão seguros por enquanto. Vocês tiram um bom sono e descansam. Após uma semana já estava tudo tranquilo e você viu oportunidade de treinar para seguir seu sonho.\n[1] Para começar a treinar.\n[2] Para não ir treinar, e ficar descansando.`));
     if (treinarAbrigo == 1 ){
@@ -166,6 +174,8 @@ function abrigo() {
 
     
 }
+
+// Função para treinar no abrigo
 
 function treinando(){
     alert(`BOAA! você conquistou a emoção "Responsabilidade".`)
@@ -192,6 +202,7 @@ function treinando(){
 
 }
 
+// Função para descansar no abrigo
 function descansando(){
     alert(`Você decidiu não ir terinar e ficar descansando, quando você estava deitado viu uma mulher linda no abrigo, você foi falar com ela e descobriu que o nome da mulher era Dorsa Yavarivafa, e ela praticava o esporte Badminton. Dorsa também conquistou troféu de primeiro lugar em seu país de origem irã, mas teve que fugir para o abrigo de refugiados devido as guerras que tiveram no país.`)
 
@@ -218,17 +229,9 @@ function descansando(){
         alert(`Resposta não identificada`)
         descansando()
     }
-
-
-
-
-
-
-
-
-// adanan vai descançar e acha uma menina mt bonita (dorsa) e conversa com dorsa e faz uma amizade muito forte a dorsa que é uma jogadora de badmintom chama adnan para treinar e adnan começa a treinar judo tbm 
 }
 
+// Função que diante sua decisão você ganha as olimpíadas
 function olimpiadas(){
 
     alert(`PARABÉNS!!! Diante sua esolha, você adquiriu a emoção "Disciplina", tem grande chance de ir muito bem nessas Olimpìadas.`)
@@ -258,6 +261,9 @@ function olimpiadas(){
 
 
 }
+
+
+// Função para lidar com a decisão de faltar ao treino e sair para beber
 function tentednv(){
    volte = Number(prompt(`Bom, diante a sua resposta não foi possível obter a emoção "Disciplina". Tente novamente e repense a sua escolha.\nDigite [1] para terminar o jogo.\nDigite [2] para voltar à questão anterior.\nDigite [3] para recomeçar o jogo.`)) 
    
@@ -282,7 +288,7 @@ function tentednv(){
    }
 }
 
-
+// Função para lidar com a decisão de ir à festa com Dorsa
 function fimDorsa(){
    
    finalDorsa = Number(prompt(`Certo, diante sua resposta não foi possível obter a emoção "Disciplina". Tente novamente e repense suas atitudes\nDigite [1] para terminar o jogo.\nDigite [2] para voltar à questão anterior.\nDigite [3] para recomeçar o jogo.`)) 
@@ -310,6 +316,8 @@ function fimDorsa(){
    
 
 }
+
+// Função para lidar com a decisão de treinar e alcançar a disciplina necessária
 function treinarGanhar(){
     alert(`VOCÊ ESTÁ INDO EM UM BOM CAMINHO!!!  diante a sua escolha você adquiriu a emoção "Disciplina" e tem a maior chance de ir bem nessas Olimpíadas.`)
     alert(`Você conseguiu todos os requesitos pedidos, Diante isso Adnan surpreendeu a todos nessas Olimpíadas, passe adiante e veja como Adnan foi.`)
