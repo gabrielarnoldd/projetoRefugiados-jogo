@@ -323,7 +323,7 @@ function treinarGanhar(){
     alert(`Você conseguiu todos os requesitos pedidos, Diante isso Adnan surpreendeu a todos nessas Olimpíadas, passe adiante e veja como Adnan foi.`)
     alert(`🎆🎆🎆🎆🎆VOCÊ FICOU EM PRIMEIRO LUGAR.🎆🎆🎆🎆🎆`)
 
-    acabou = Number(prompt(`Você concluiu o jogo "Trilha da coragem"\nDigitr [1] para encerrar o jogo.\nDigite [2] para recomeçar o jogo.`))
+    acabou = Number(prompt(`Você concluiu o jogo "Trilha da coragem"\nDigite [1] para encerrar o jogo.\nDigite [2] para recomeçar o jogo.`))
 
     if (acabou == 1){
         alert(`Muito obrigado por jogar! espero que tenha gostado.\nJogo feito por: Gabriel Arnold da Silva`)
